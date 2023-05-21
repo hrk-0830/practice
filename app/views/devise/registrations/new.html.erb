@@ -7,7 +7,7 @@
           <h2>新規会員登録</h2>
         </div>
         <div class="card-body">
-          <%= form_with model: @customer, url: customer_registration_path,  class: 'new_customer', local: true do |f| %>
+          <%= form_with model: @customer, url: user_registration_path,  class: 'new_customer', local: true do |f| %>
             <div class="form-group">
               <%= f.label :メールアドレス %>
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control" %>
@@ -22,7 +22,7 @@
           <% end %>
           <div class="text-center">
             <div class ="mt-5">
-              <p>既に登録済みの方<%= link_to "こちら",new_customer_session_path %>からログインしてください。</p>
+              <p>既に登録済みの方<%= link_to "こちら",new_user_registration_path %>からログインしてください。</p>
             </div>
           </div>
         </div>

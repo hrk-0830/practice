@@ -1,2 +1,21 @@
-<h1>Posts#new</h1>
-<p>Find me in app/views/posts/new.html.erb</p>
+<div class ="container">
+  <div class ="row">
+    
+    <div class ="col-md-10">
+      <%= form_with model: @post do |f| %>
+        <div class ="form-group">
+           <label>Title</label> </br>
+          <%= f.text_field :title %>
+        </div>
+        <div class ="form-group">
+          <label>text</label> </br>
+          <%= f.text_area :body %>
+        </div>
+        <div class ="form-group">
+          <%= f.submit '投稿する', class: "btn btn-secondary" %>
+        </div>
+      <% end %>
+    </div>
+    
+  </div>
+</div>

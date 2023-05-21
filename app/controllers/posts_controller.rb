@@ -9,7 +9,7 @@ class PostsController < ApplicationController
       redirect_to posts_path
     else
       render :index
-      
+    end
   end
 
   def index
